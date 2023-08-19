@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="collection view cell content view" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="CollectionView" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Dbe-pf-mva">
+                                <rect key="frame" x="0.0" y="59" width="393" height="759"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="iZo-JW-Fzw" customClass="UI">
+                                    <size key="itemSize" width="128" height="128"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ONE" id="xmg-Pf-fkw" customClass="CollectionViewCell" customModule="CollectionView" customModuleProvider="target">
+                                        <rect key="frame" x="21.666666666666668" y="0.0" width="350" height="350"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="QCf-2N-2WE">
+                                            <rect key="frame" x="0.0" y="0.0" width="350" height="350"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="2022-bmw-f30-widebody-f30-hw" translatesAutoresizingMaskIntoConstraints="NO" id="UtL-Hh-YAE">
+                                                    <rect key="frame" x="5" y="5" width="340" height="295"/>
+                                                </imageView>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="p00-Xy-q71">
+                                                    <rect key="frame" x="1" y="301" width="348" height="48"/>
+                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="p00-Xy-q71" secondAttribute="bottom" constant="1" id="6Ed-HR-gDq"/>
+                                                <constraint firstItem="p00-Xy-q71" firstAttribute="leading" secondItem="QCf-2N-2WE" secondAttribute="leading" constant="1" id="8gc-k9-V8O"/>
+                                                <constraint firstAttribute="bottom" secondItem="UtL-Hh-YAE" secondAttribute="bottom" constant="50" id="QhV-nd-L1w"/>
+                                                <constraint firstAttribute="trailing" secondItem="p00-Xy-q71" secondAttribute="trailing" constant="1" id="e7w-ht-JOa"/>
+                                                <constraint firstAttribute="trailing" secondItem="UtL-Hh-YAE" secondAttribute="trailing" constant="5" id="hDP-P4-Vwj"/>
+                                                <constraint firstItem="UtL-Hh-YAE" firstAttribute="leading" secondItem="QCf-2N-2WE" secondAttribute="leading" constant="5" id="lRl-fK-Ub2"/>
+                                                <constraint firstItem="UtL-Hh-YAE" firstAttribute="top" secondItem="QCf-2N-2WE" secondAttribute="top" constant="5" id="pmf-z1-pum"/>
+                                                <constraint firstItem="p00-Xy-q71" firstAttribute="top" secondItem="UtL-Hh-YAE" secondAttribute="bottom" constant="1" id="zcZ-0j-EL7"/>
+                                            </constraints>
+                                        </collectionViewCellContentView>
+                                        <size key="customSize" width="350" height="350"/>
+                                        <connections>
+                                            <outlet property="imageView" destination="UtL-Hh-YAE" id="m9M-5w-FRI"/>
+                                            <outlet property="label" destination="p00-Xy-q71" id="JLt-Dq-1jK"/>
+                                        </connections>
+                                    </collectionViewCell>
+                                </cells>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="XMb-Ob-bU4"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="eqj-KL-O2W"/>
+                                </connections>
+                            </collectionView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="Dbe-pf-mva" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="HL2-eg-cPg"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="Dbe-pf-mva" secondAttribute="trailing" id="NVU-2r-C28"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="Dbe-pf-mva" secondAttribute="bottom" id="vHt-uJ-eMW"/>
+                            <constraint firstItem="Dbe-pf-mva" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="z9V-dj-ibW"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="collectionView" destination="Dbe-pf-mva" id="INk-xu-MaN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="72.51908396946564" y="3.5211267605633805"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="2022-bmw-f30-widebody-f30-hw" width="3840" height="2560"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
